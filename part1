@@ -15,8 +15,6 @@ class LuckyFive {
 
       System.out.println(dieRoll);
       dieRoll = randomGenerator.nextInt(6) + 1;
-
     }
   }
-  
 }

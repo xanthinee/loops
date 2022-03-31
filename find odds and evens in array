@@ -1,0 +1,35 @@
+Public ArrayList<Integer> onlyOdds (int []numbers) {
+    ArrayList<Integer> odds = new ArrayList<Integer>();
+
+    for (int i : numbers) {
+        if (i % 2 == 0) {
+            odds.add(i);
+        }
+    }
+    return odds;
+}
+
+    public ArrayList<Integer> onlyEvens (int []numbers) {
+        ArrayList<Integer> evens = new ArrayList<Integer>();
+
+        for (int i : numbers) {
+            if (i % 2 != 0) {
+                evens.add(i);
+            }
+        }
+        return evens;
+    }
+
+  
+  // next one
+  
+  public static int[] odOrEv(int [] numbers) {
+        for (int i : numbers) {
+            if (i % 2 == 0) {
+                System.out.println("Even");
+            } else {
+                System.out.println("Odd");
+            }
+        }
+        return numbers;
+    }

@@ -1,0 +1,18 @@
+public static void wordReverse (String str) {
+
+       ArrayList<String> dividedString = new ArrayList<>();
+       String[] words = str.split("\\s");
+
+       for (String word: words) {
+           dividedString.add(word);
+       }
+
+       for (int j = 0; j < dividedString.size() / 2; j++) {
+           String temp = dividedString.get(j);
+           dividedString.set(j, dividedString.get(dividedString.size() - (j+1)));
+           dividedString.set(dividedString.size() - (j+1), temp);
+       }
+
+       String listString = String.join(" ", dividedString);
+       System.out.println(listString);
+   }

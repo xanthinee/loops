@@ -1,0 +1,23 @@
+public static void reversed(String str) {
+
+       char[] abChar = str.toCharArray();
+
+       int j = abChar.length - 1;
+       for (int i = 0; i < j; i++) {
+           if (!Character.isLetter(abChar[i])) {
+               continue;
+           }
+
+           while (j > i && !Character.isLetter(abChar[j])) {
+               j--;
+           }
+           if (j != i) {
+               char temp = abChar[i];
+               abChar[i] = abChar[j];
+               abChar[j] = temp;
+               j--;
+           }
+       }
+       String result = String.valueOf(abChar);
+       System.out.println(result);
+   }
